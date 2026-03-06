@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Jost:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll">
+  <header>
+    <div class="container-fluid" data-bs-target="#navbarNav">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <a class="navbar-brand" href="#">FASCO</a>
+        <div class="collapse navbar-collapse align-self-center d-flex justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Deals</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">New Arrivals</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Packages</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Sign in</a></li>
+          </ul>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button type="button" class="btn btn-dark btn-primary">Sign Up</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section id="#">
+    <div class="container mt-5">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="bg-light h-100 text-center rounded">
+            <img src="images/homepage_1.png" class="img-fluid" alt="Чоловічий одяг">
+          </div>
+        </div>
+        <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
+          <div class="bg-light rounded d-flex flex-column justify-content-end text-center">
+            <img src="images/homepage_3min.png" class="img-fluid rounded mb-3" alt="girls">
+          </div>
+          <div class="text-center my-4">
+            <h2>ULTIMATE <br> <span class="text-secondary display-4">SALE</span></h2>
+            <p>NEW COLLECTION</p>
+            <button class="btn btn-dark px-4 py-2">SHOP NOW</button>
+          </div>
+          <div class="rounded">
+            <img src="images/homepage_4min.png" class="img-fluid" alt="Дівчата">
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="bg-light h-100 text-center rounded">
+            <img src="images/homepage_2.png" class="img-fluid" alt="Чоловічий стиль">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container my-5">
+      <ul class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <li class="logo-items mb-0"><img src="images/logo_chanel.png" alt=""></li>
+        <li class="logo-items mb-0"><img src="images/logo_LV.png" alt=""></li>
+        <li class="logo-items mb-0"><img src="images/logo_prada.png" alt=""></li>
+        <li class="logo-items mb-0"><img src="images/logo_ck.png" alt=""></li>
+        <li class="logo-items mb-0"><img src="images/logo_denim.png" alt=""></li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div class="container my-5">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-5">
+          <h2 class="display-6 mb-3">Deals Of The Month</h2>
+          <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing <br> elit. Scelerisque duis
+            ultrices
+            sollicitudin aliquam sem. <br> Scelerisque duis ultrices sollicitudin </p>
+          <button class="btn btn-dark px-4 py-2 mb-5">Buy Now</button>
+          <h5>Hurry, Before It's Too Late!</h5>
+          <div class="d-flex gap-4 mt-3">
+            <div class="text-center">
+              <div class="fs-2 bg-light rounded p-2 border" id="days">00</div>
+              <small class="text-muted">Days</small>
+            </div>
+            <div class="text-center">
+              <div class="fs-2 bg-light rounded p-2 border" id="hours">00</div>
+              <small class="text-muted">Hr</small>
+            </div>
+            <div class="text-center">
+              <div class="fs-2 bg-light rounded p-2 border" id="minutes">00</div>
+              <small class="text-muted">Mins</small>
+            </div>
+            <div class="text-center">
+              <div class="fs-2 bg-light rounded p-2 border" id="seconds">00</div>
+              <small class="text-muted">Sec</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-7 mt-5 mt-md-0">
+
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper align-items-start">
+
+              <div class="swiper-slide">
+                <div class="position-relative w-100 h-100">
+                  <img src="images/homepage_carousel1.png" class="w-100 h-100 object-fit-cover rounded"
+                    alt="carousel_girls">
+                  <div class="position-absolute bottom-0 start-0 bg-white p-3 m-3 shadow-sm sale-badge">
+                    <p class="mb-1 text-muted small">01 — Spring Sale</p>
+                    <h6 class="mb-0 fw-bold">30% OFF</h6>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="position-relative w-100 h-100">
+                  <img src="images/homepage_carousel2.png" class="w-100 h-100 object-fit-cover rounded"
+                    alt="carousel_girls">
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="position-relative w-100 h-100">
+                <img src="images/homepage_carousel3.png" class="w-100 h-100 object-fit-cover rounded"
+                  alt="carousel_girls">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="position-relative w-100 h-100">
+                <img src="images/homepage_carousel4.png" class="w-100 h-100 object-fit-cover rounded"
+                  alt="carousel_girls">
+              </div>
+            </div>
+
+            <div class="controls-wrapper">
+              <div class="d-flex gap-2 align-items-center">
+                <button
+                  class="btn btn-outline-dark rounded-circle custom-prev d-flex justify-content-center align-items-center"
+                  style="width: 40px; height: 40px;">
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+                <button
+                  class="btn btn-outline-dark rounded-circle custom-next d-flex justify-content-center align-items-center"
+                  style="width: 40px; height: 40px;">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+
+                <div class="custom-pagination ms-3 d-flex gap-2"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container"></div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

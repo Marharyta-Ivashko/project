@@ -1,0 +1,107 @@
+.navbar-brand{
+  font-family: 'volkhov', sans-serif;
+  font-size: 3rem;
+  margin-left: 1rem;
+}
+
+.nav-item a{
+  font-family: 'poppins', sans-serif;
+  font-size: 1rem;
+}
+
+.navbar-nav li{
+max-width: 764px;
+margin-right: 58px;
+}
+
+.logo{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.logo-items{
+list-style-type: none;
+}
+
+#days, #hours, #minutes, #seconds{
+font-family: "Orbitron", sans-serif;
+  font-weight: 400;
+font-size: 2rem;
+color: #484848;
+}
+
+/* --- СТИЛІ ДЛЯ КАСТУМНОЇ КАРУСЕЛІ SWIPER --- */
+
+/* 1. Головний контейнер */
+.mySwiper {
+  height: 550px; /* Ви можете змінити цю цифру, щоб зробити слайдер вищим/нижчим */
+  position: relative; /* ЦЕ НАЙВАЖЛИВІШЕ ПРАВИЛО! Без нього кнопки "падають" */
+}
+
+/* 2. Примушуємо всі слайди притискатися до верху */
+.mySwiper .swiper-wrapper {
+  align-items: flex-start !important;
+}
+
+/* 3. Налаштування слайдів (за замовчуванням всі КОРОТШІ) */
+.mySwiper .swiper-slide {
+  height: 75% !important; 
+  transition: height 0.4s ease-in-out; 
+}
+
+/* 4. АКТИВНИЙ слайд стає на всю висоту */
+.mySwiper .swiper-slide-active {
+  height: 100% !important;
+}
+
+/* 5. Біла плашка з текстом */
+.sale-badge {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.4s ease;
+}
+
+.swiper-slide-active .sale-badge {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* 6. Блок управління (Кнопки та Крапки) */
+.controls-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%; /* Ширина блоку, щоб він якраз помістився під другим слайдом */
+  z-index: 10;
+  padding-bottom: 20px; /* Відступ від самісінького низу */
+}
+
+/* Налаштування красивих крапок */
+.swiper-pagination-bullet {
+  background-color: #000 !important;
+  opacity: 0.2;
+  width: 8px !important;
+  height: 8px !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+  /* Робимо неактивні крапки напівпрозорими */
+  .swiper-pagination-bullet {
+    background-color: #000 !important;
+    opacity: 0.2;
+    transition: all 0.3s ease;
+    width: 8px !important;
+    height: 8px !important;
+  }
+  /* Активна крапка буде більшою і яскравою */
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    transform: scale(1.3);
+  }
