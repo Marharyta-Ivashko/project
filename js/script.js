@@ -1,14 +1,14 @@
-  // --- 1. НАЛАШТУВАННЯ СЛАЙДЕРА SWIPER ---
+// --- 1. НАЛАШТУВАННЯ СЛАЙДЕРА SWIPER ---
 const swiper = new Swiper('.mySwiper', {
   // Показуємо 1 повний слайд і "шматочок" наступного на мобільному
-  slidesPerView: 1.2, 
+  slidesPerView: 1.2,
   spaceBetween: 20, // Відстань між фото (в пікселях)
-  
+
   // Налаштування для різних екранів (Адаптивність)
   breakpoints: {
     768: {
       // На планшетах і ПК показуємо 2 повних фото і половинку третього
-      slidesPerView: 2.5, 
+      slidesPerView: 2.5,
       spaceBetween: 30,
     }
   },
@@ -28,10 +28,9 @@ const swiper = new Swiper('.mySwiper', {
 // ... далі йде ваш код таймера ...
 
 // --- 2. НАЛАШТУВАННЯ ТАЙМЕРА ---
-const countDownDate = new Date();
-countDownDate.setDate(countDownDate.getDate() + 3); // Акція на 3 дні вперед
+const countDownDate = new Date("March 31, 2026 23:59:59").getTime();
 
-const timer = setInterval(function() {
+const timer = setInterval(function () {
   const now = new Date().getTime();
   const distance = countDownDate - now;
 

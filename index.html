@@ -26,19 +26,19 @@
         <div class="collapse navbar-collapse align-self-center d-flex justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Deals</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">New Arrivals</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Packages</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Sign in</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Deals</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">New Arrivals</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Packages</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Sign in</a></li>
           </ul>
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button type="button" class="btn btn-dark btn-primary">Sign Up</button>
+          <button type="button" class="btn btn-dark">Sign Up</button>
         </div>
       </nav>
     </div>
   </header>
-  <section id="#">
+  <section>
     <div class="container mt-5">
       <div class="row g-4">
         <div class="col-12 col-md-4">
@@ -78,7 +78,7 @@
       </ul>
     </div>
   </section>
-  <section>
+  <section class="deals bg-body-tertiary">
     <div class="container my-5">
       <div class="row align-items-center">
         <div class="col-12 col-md-5">
@@ -108,10 +108,8 @@
           </div>
         </div>
         <div class="col-12 col-md-7 mt-5 mt-md-0">
-
           <div class="swiper mySwiper">
             <div class="swiper-wrapper align-items-start">
-
               <div class="swiper-slide">
                 <div class="position-relative w-100 h-100">
                   <img src="images/homepage_carousel1.png" class="w-100 h-100 object-fit-cover rounded"
@@ -122,29 +120,19 @@
                   </div>
                 </div>
               </div>
-
               <div class="swiper-slide">
                 <div class="position-relative w-100 h-100">
                   <img src="images/homepage_carousel2.png" class="w-100 h-100 object-fit-cover rounded"
                     alt="carousel_girls">
                 </div>
               </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="position-relative w-100 h-100">
-                <img src="images/homepage_carousel3.png" class="w-100 h-100 object-fit-cover rounded"
-                  alt="carousel_girls">
+              <div class="swiper-slide">
+                <div class="position-relative w-100 h-100">
+                  <img src="images/homepage_carousel3.png" class="w-100 h-100 object-fit-cover rounded"
+                    alt="carousel_girls">
+                </div>
               </div>
             </div>
-
-            <div class="swiper-slide">
-              <div class="position-relative w-100 h-100">
-                <img src="images/homepage_carousel4.png" class="w-100 h-100 object-fit-cover rounded"
-                  alt="carousel_girls">
-              </div>
-            </div>
-
             <div class="controls-wrapper">
               <div class="d-flex gap-2 align-items-center">
                 <button
@@ -157,13 +145,46 @@
                   style="width: 40px; height: 40px;">
                   <i class="bi bi-chevron-right"></i>
                 </button>
-
                 <div class="custom-pagination ms-3 d-flex gap-2"></div>
               </div>
             </div>
-
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div>
+        <h2>New Arrivals</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem.
+          Scelerisque duis ultrices sollicitudin </p>
+      </div>
+      <ul class="nav nav-pills nav-fill">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Men’s Fashion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Women’s Fashion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Women Accessories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Men Accessories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Discount Deals</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="images/new_arrivals/shiny_dress.png" class="card-img-top" alt="shiny_dress">
+      <div class="card-body">
+        <h5 class="card-title">Shiny Dress</h5>
+        <img src="images/svg/star.svg" alt="star">
+        <p class="card-text">(4.1k) Customer Reviews</p>
+        <h5>$95.50</h5>
       </div>
     </div>
   </section>
