@@ -69,3 +69,23 @@ const starIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 containers.forEach(container => {
   container.innerHTML = starIcon.repeat(5);
 });
+
+// 1. Знаходимо всі посилання всередині нашого конкретного меню
+const navLinks = document.querySelectorAll('#categoryMenu .nav-link');
+
+// 2. Перебираємо кожне посилання та додаємо "слухача" подій
+navLinks.forEach(link => {
+  link.addEventListener('click', function (event) {
+
+    // Запобігаємо стандартному переходу за посиланням (щоб сторінка не стрибала)
+    event.preventDefault();
+
+    // Крок А: Видаляємо клас 'active' з усіх пунктів меню
+    navLinks.forEach(item => {
+      item.classList.remove('active');
+    });
+
+    // Крок Б: Додаємо клас 'active' саме тому пункту, на який щойно натиснули
+    this.classList.add('active');
+  });
+});

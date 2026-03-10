@@ -1,3 +1,7 @@
+body {
+  background-color: #F5F5F5
+}
+
 .navbar-brand {
   font-family: 'volkhov', sans-serif;
   font-size: 3rem;
@@ -117,4 +121,96 @@
 .deals {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.nav-pills .nav-link {
+  color: black;
+  /* Чорний текст */
+  background-color: white;
+  /* Білий фон */
+  border-radius: 50px;
+}
+
+.nav-pills .nav-link:hover {
+  color: black;
+  background-color: #e9ecef;
+  /* Світло-сірий фон при наведенні */
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  color: white !important;
+  /* Білий текст */
+  background-color: black !important;
+  /* Чорний фон */
+}
+
+.product-section {
+  width: 100%;
+  overflow: hidden;
+  /* Ховаємо елементи, що виходять за межі при нахилі */
+  background-color: #F8F8F8;
+  /* Колір фону текстового блоку */
+}
+
+.product-image-col {
+  /* Замініть URL на ваше фото */
+  background: url('../images/image.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* Фото маштабується, щоб влізти повністю і не обрізатися */
+  background-position: right center;
+  /* 80% посуне фото правіше ближче до лінії */
+  min-height: 350px;
+  /* Висота для мобільних пристроїв */
+}
+
+.product-text-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  background-color: #F8F8F8;
+}
+
+.text-content {
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 992px) {
+  .product-section {
+    height: 570px;
+    /* Фіксована висота на ПК, як ви замовляли */
+  }
+
+  .product-image-col {
+    min-height: 100%;
+  }
+
+  .product-text-col {
+    padding-left: 4rem;
+    /* Відступ від косої лінії */
+  }
+
+  /* Створення косої чорної лінії та накладання на фото */
+  .product-text-col::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -45px;
+    /* Зсуваємо блок вліво, щоб він перекривав фото */
+    width: 150%;
+    /* Ширина з запасом, щоб закрити правий край */
+    background-color: #DADADA;
+    /* Той самий колір, що й фон текстового блоку */
+    border-left: 3px solid #000000;
+    /* Сама чорна коса лінія */
+    transform: skewX(-12deg);
+    /* Нахил лінії */
+    transform-origin: bottom;
+    z-index: 1;
+  }
 }
