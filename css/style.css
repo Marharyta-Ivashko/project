@@ -1,15 +1,33 @@
+:root {
+  --bs-body-font-family: 'poppins', sans-serif;
+  --custom-heading-font: 'volkhov', sans-serif;
+  --custom-timer-font: 'orbitron', sans-serif;
+  --custom-shop-font: 'jost', sans-serif;
+  --bs-muted: #484848;
+  --bs-primary: #8A8A8A;
+  --bs-success: #00cc66;
+  --bs-dark: #000000;
+  --bs-white: #FFFFFF;
+}
+
+h2 {
+  font-family: var(--custom-heading-font);
+  font-size: 2rem;
+  color: var(--bs-muted);
+  font-weight: 400;
+}
+
 body {
   background-color: #F5F5F5
 }
 
 .navbar-brand {
-  font-family: 'volkhov', sans-serif;
+  font-family: var(--custom-heading-font);
   font-size: 3rem;
-  margin-left: 1rem;
 }
 
 .nav-item a {
-  font-family: 'poppins', sans-serif;
+  font-family: var(--bs-body-font-family);
   font-size: 1rem;
 }
 
@@ -31,10 +49,9 @@ body {
 #hours,
 #minutes,
 #seconds {
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--custom-timer-font);
   font-weight: 400;
   font-size: 2rem;
-  color: #484848;
 }
 
 /* --- СТИЛІ ДЛЯ КАСТУМНОЇ КАРУСЕЛІ SWIPER --- */
@@ -103,46 +120,25 @@ body {
   transform: scale(1.3);
 }
 
-/* Робимо неактивні крапки напівпрозорими */
-.swiper-pagination-bullet {
-  background-color: #000 !important;
-  opacity: 0.2;
-  transition: all 0.3s ease;
-  width: 8px !important;
-  height: 8px !important;
-}
-
-/* Активна крапка буде більшою і яскравою */
-.swiper-pagination-bullet-active {
-  opacity: 1;
-  transform: scale(1.3);
-}
-
 .deals {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
 .nav-pills .nav-link {
-  color: black;
-  /* Чорний текст */
-  background-color: white;
-  /* Білий фон */
+  color: var(--bs-primary);
   border-radius: 50px;
 }
 
 .nav-pills .nav-link:hover {
   color: black;
-  background-color: #e9ecef;
-  /* Світло-сірий фон при наведенні */
+  border: 1px solid var(--bs-dark);
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-  color: white !important;
-  /* Білий текст */
-  background-color: black !important;
-  /* Чорний фон */
+  color: var(--bs-white);
+  background-color: var(--bs-dark);
 }
 
 .product-section {
@@ -212,5 +208,163 @@ body {
     /* Нахил лінії */
     transform-origin: bottom;
     z-index: 1;
+  }
+}
+
+/* Загальний фон секції */
+.testimonials-section {
+  background-color: #f8f9fa;
+  /* Світло-сірий фон, як на скріншоті */
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+/* Налаштування контейнера слайдера */
+.testimonials-slider {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  /* Зменшили, бо кнопки тепер нижче */
+  overflow: hidden;
+}
+
+/* Налаштування окремого слайда (картки) */
+.testimonials-slider .swiper-slide {
+  background: #ffffff;
+  width: 700px;
+  /* Ширина картки на ПК */
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transition: all 0.4s ease;
+  /* Плавна анімація зміни розміру */
+
+  /* Неактивні слайди (зменшені та прозорі) */
+  transform: scale(0.8);
+  opacity: 0.5;
+  z-index: 1;
+  box-shadow: none;
+}
+
+/* Активний слайд (по центру) */
+.testimonials-slider .swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 10;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* Стиль для фотографії з сірим квадратом позаду */
+.testimonial-img-wrapper {
+  position: relative;
+  min-width: 180px;
+  height: 180px;
+}
+
+/* Сірий квадрат (зміщений вліво і вниз) */
+.testimonial-img-bg {
+  position: absolute;
+  top: 15px;
+  left: -15px;
+  width: 100%;
+  height: 100%;
+  background-color: #e0e0e0;
+  z-index: 1;
+}
+
+/* Саме фото */
+.testimonial-img-wrapper img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+/* Золоті зірочки */
+.stars {
+  color: #ffb400;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* Кнопки навігації (стрілочки) */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: #333;
+  top: auto;
+  bottom: 0;
+  /* Опускаємо вниз */
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  /* Центруємо */
+  gap: 20px;
+  /* Відстань між кнопками */
+  margin-top: 10px;
+  /* Відступ від карток до кнопок */
+}
+
+/* Перебиваємо стандартні налаштування Swiper для кнопок */
+.testim-btn-prev,
+.testim-btn-next {
+  position: static !important;
+  /* Відміняємо абсолютне позиціювання поверх фото */
+  margin: 0 !important;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  color: #333;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px;
+  /* Розмір стрілочок */
+}
+
+/* Розташування кнопок по центру знизу */
+.swiper-button-prev {
+  left: calc(50% - 60px);
+}
+
+.swiper-button-next {
+  right: calc(50% - 60px);
+}
+
+/* Лінія під зірками */
+.divider-line {
+  width: 100px;
+  height: 1px;
+  background-color: #d3d3d3;
+  margin: 20px 0;
+}
+
+/* Адаптивність для телефонів */
+@media (max-width: 768px) {
+  .testimonials-slider .swiper-slide {
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .testimonial-img-bg {
+    left: 15px;
+    /* На мобільному зміщуємо інакше, щоб не вилазило */
+  }
+
+  .divider-line {
+    margin: 20px auto;
   }
 }

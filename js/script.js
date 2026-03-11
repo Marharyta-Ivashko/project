@@ -34,6 +34,15 @@ const timer = setInterval(function () {
   const now = new Date().getTime();
   const distance = countDownDate - now;
 
+  if (distance < 0) {
+    clearInterval(timer);
+    document.getElementById("days").innerHTML = "00";
+    document.getElementById("hours").innerHTML = "00";
+    document.getElementById("minutes").innerHTML = "00";
+    document.getElementById("seconds").innerHTML = "00";
+    return; // Перериваємо функцію, щоб код нижче не виконувався!
+  }
+
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -82,10 +91,28 @@ navLinks.forEach(link => {
 
     // Крок А: Видаляємо клас 'active' з усіх пунктів меню
     navLinks.forEach(item => {
-      item.classList.remove('active');
+      item.classList.remove('active', 'dark');
     });
 
     // Крок Б: Додаємо клас 'active' саме тому пункту, на який щойно натиснули
-    this.classList.add('active');
+    this.classList.add('active', 'dark');
   });
+});
+
+const swiperTestimonials = new Swiper('.testimonials-slider', {
+  slidesPerView: 'auto',
+  centeredSlides: true,
+  loop: false,
+  initialSlide: 1,
+
+  navigation: {
+    // Вказуємо унікальні класи для стрілочок саме цього слайдера
+    nextEl: '.testim-btn-next',
+    prevEl: '.testim-btn-prev',
+  },
+
+  breakpoints: {
+    320: { spaceBetween: 20 },
+    992: { spaceBetween: -180 }
+  }
 });

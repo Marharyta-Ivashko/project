@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>FASCO SHOP</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
@@ -14,20 +14,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Jost:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Orbitron&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
 </head>
 
-<body data-bs-spy="scroll">
+
+<body data-bs-spy="scroll" data-bs-target="#navbarNav">
   <header>
-    <div class="container-fluid" data-bs-target="#navbarNav">
+    <div class="container-fluid">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <a class="navbar-brand" href="#">FASCO</a>
+        <a class="navbar-brand text-muted" href="#">FASCO</a>
         <div class="collapse navbar-collapse align-self-center d-flex justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Deals</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">New Arrivals</a></li>
+            <li class="nav-item"><a class="nav-link" href="#deals">Deals</a></li>
+            <li class="nav-item"><a class="nav-link" href="#arrivals">New Arrivals</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Packages</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Sign in</a></li>
           </ul>
@@ -50,8 +51,11 @@
           <div class="bg-light rounded d-flex flex-column justify-content-end text-center">
             <img src="images/homepage_3min.png" class="img-fluid rounded mb-3" alt="girls">
           </div>
-          <div class="text-center my-4">
-            <h2>ULTIMATE <br> <span class="text-secondary display-4">SALE</span></h2>
+          <div class="text-center text-muted my-4">
+            <h1 class="fw-bold" style="font-size: 3rem ; line-height: 1; letter-spacing: -4%;">ULTIMATE <br>
+              <span class="display-4 fw-semibold"
+                style="font-size: 6rem; color: transparent; -webkit-text-stroke: 2px var(--bs-muted);">SALE</span>
+            </h1>
             <p>NEW COLLECTION</p>
             <button class="btn btn-dark px-4 py-2">SHOP NOW</button>
           </div>
@@ -70,40 +74,39 @@
   <section>
     <div class="container my-5">
       <ul class="d-flex flex-wrap justify-content-between align-items-center gap-3">
-        <li class="logo-items mb-0"><img src="images/logo_chanel.png" alt=""></li>
-        <li class="logo-items mb-0"><img src="images/logo_LV.png" alt=""></li>
-        <li class="logo-items mb-0"><img src="images/logo_prada.png" alt=""></li>
-        <li class="logo-items mb-0"><img src="images/logo_ck.png" alt=""></li>
-        <li class="logo-items mb-0"><img src="images/logo_denim.png" alt=""></li>
+        <li class="logo-items mb-0"><img src="images/logo/logo_chanel.png" alt="logo_chanel"></li>
+        <li class="logo-items mb-0"><img src="images/logo/logo_LV.png" alt="logo_LV"></li>
+        <li class="logo-items mb-0"><img src="images/logo/logo_prada.png" alt="logo_prada"></li>
+        <li class="logo-items mb-0"><img src="images/logo/logo_ck.png" alt="logo_ck"></li>
+        <li class="logo-items mb-0"><img src="images/logo/logo_denim.png" alt="logo_denim"></li>
       </ul>
     </div>
   </section>
-  <section class="deals bg-body-tertiary">
+  <section id="deals" class="deals bg-body-tertiary">
     <div class="container my-5">
       <div class="row align-items-center">
-        <div class="col-12 col-md-5">
+        <div class="text-muted col-12 col-md-5">
           <h2 class="display-6 mb-3">Deals Of The Month</h2>
-          <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing <br> elit. Scelerisque duis
-            ultrices
-            sollicitudin aliquam sem. <br> Scelerisque duis ultrices sollicitudin </p>
+          <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing <br> elit. Scelerisque duis
+            ultrices sollicitudin aliquam sem. <br> Scelerisque duis ultrices sollicitudin </p>
           <button class="btn btn-dark px-4 py-2 mb-5">Buy Now</button>
           <h5>Hurry, Before It's Too Late!</h5>
           <div class="d-flex gap-4 mt-3">
             <div class="text-center">
               <div class="fs-2 bg-light rounded p-2 border" id="days">00</div>
-              <small class="text-muted">Days</small>
+              <small>Days</small>
             </div>
             <div class="text-center">
               <div class="fs-2 bg-light rounded p-2 border" id="hours">00</div>
-              <small class="text-muted">Hr</small>
+              <small>Hr</small>
             </div>
             <div class="text-center">
               <div class="fs-2 bg-light rounded p-2 border" id="minutes">00</div>
-              <small class="text-muted">Mins</small>
+              <small>Mins</small>
             </div>
             <div class="text-center">
               <div class="fs-2 bg-light rounded p-2 border" id="seconds">00</div>
-              <small class="text-muted">Sec</small>
+              <small>Sec</small>
             </div>
           </div>
         </div>
@@ -153,12 +156,12 @@
       </div>
     </div>
   </section>
-  <section>
-    <div class="container">
-      <div class="text-center">
+  <section id="arrivals">
+    <div class="container my-5">
+      <div class="text-center text-muted">
         <h2>New Arrivals</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis <br> ultrices sollicitudin aliquam
-          sem.
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis <br> ultrices sollicitudin
+          aliquamsem.
           Scelerisque duis ultrices sollicitudin </p>
       </div>
       <ul class="nav nav-pills nav-fill" id="categoryMenu">
@@ -166,7 +169,7 @@
           <a class="nav-link" href="#">Men’s Fashion</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active dark" aria-current="page" href="#">Women’s Fashion</a>
+          <a class="nav-link active" aria-current="page" href="#">Women’s Fashion</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Women Accessories</a>
@@ -182,7 +185,7 @@
     <div class="container mt-5">
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-          <div class="card h-100">
+          <div class="card h-100 border-0">
             <img src="images/new_arrivals/shiny_dress.png" class="card-img-top" alt="shiny_dress">
             <div class="card-body">
               <h5 class="card-title">Shiny Dress</h5>
@@ -197,7 +200,7 @@
         </div>
 
         <div class="col">
-          <div class="card h-100">
+          <div class="card h-100 border-0">
             <img src="images/new_arrivals/long_dress.png" class="card-img-top" alt="long_dress">
             <div class="card-body">
               <h5 class="card-title">Long Dress</h5>
@@ -212,7 +215,7 @@
         </div>
 
         <div class="col">
-          <div class="card h-100">
+          <div class="card h-100 border-0">
             <img src="images/new_arrivals/full_sweater.png" class="card-img-top" alt="full_sweater">
             <div class="card-body">
               <h5 class="card-title">Full Sweater</h5>
@@ -227,7 +230,7 @@
         </div>
 
         <div class="col">
-          <div class="card h-100">
+          <div class="card h-100 border-0">
             <img src="images/new_arrivals/white_dress.png" class="card-img-top" alt="white_dress">
             <div class="card-body">
               <h5 class="card-title">White Dress</h5>
@@ -242,7 +245,7 @@
         </div>
 
         <div class="col">
-          <div class="card h-100">
+          <div class="card h-100 border-0">
             <img src="images/new_arrivals/colorful_dress.png" class="card-img-top" alt="colorful_dress">
             <div class="card-body">
               <h5 class="card-title">Colorful Dress</h5>
@@ -257,7 +260,7 @@
         </div>
 
         <div class="col">
-          <div class="card h-100">
+          <div class="card h-100 border-0">
             <img src="images/new_arrivals/white_shirt.png" class="card-img-top" alt="white_shirt">
             <div class="card-body">
               <h5 class="card-title">White Shirt</h5>
@@ -278,14 +281,12 @@
   </section>
   <section class="product-section container-fluid mt-5">
     <div class="row g-0 h-100">
-
       <div class="col-lg-6 product-image-col">
       </div>
-
       <div class="col-lg-6 product-text-col">
         <div class="text-content w-75">
           <p>Women Collection</p>
-          <h2 class="fw-bold mb-3">Peaky Blinders</h2>
+          <h2 class="mb-3">Peaky Blinders</h2>
           <p><u>DESCRIPTION</u></p>
           <p class="text-muted mb-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem.
@@ -336,32 +337,125 @@
           sem.
           Scelerisque duis ultrices sollicitudin </p>
       </div>
-      <div>
-        <img src="images/instagram_photos.png" alt="">
+    </div>
+    <div class="container-fluid p-0 my-5 overflow-hidden">
+      <img src="images/instagram_photos.png" class="w-100 d-block" style="object-fit: cover; max-height: 600px;"
+        alt="Instagram Photos">
+    </div>
+  </section>
+  <section class="testimonials-section">
+    <div class="container text-center mb-4">
+      <h2 class="mb-3">This Is What Our Customers Say</h2>
+      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis</p>
+    </div>
+    <div class="testimonials-slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="testimonial-img-wrapper">
+            <div class="testimonial-img-bg"></div>
+            <img src="images/testimonials/image.png" alt="Customer">
+          </div>
+          <div class="testimonial-content">
+            <p class="text-muted">"You won't regret it. I would like to personally thank you for your outstanding
+              product. Absolutely wonderful!"</p>
+            <div class="product-rating d-flex text-warning"></div>
+            <div class="divider-line"></div>
+            <h4 class="fw-bold mb-1">Sara M.</h4>
+            <small class="text-muted">Designer</small>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-img-wrapper">
+            <div class="testimonial-img-bg"></div>
+            <img src="images/testimonials/image (1).png" alt="Customer">
+          </div>
+          <div class="testimonial-content">
+            <p class="text-muted">"You won't regret it. I would like to personally thank you for your outstanding
+              product. Absolutely wonderful!"</p>
+            <div class="product-rating d-flex text-warning"></div>
+            <div class="divider-line"></div>
+            <h4 class="fw-bold mb-1">James K.</h4>
+            <small class="text-muted">Traveler</small>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-img-wrapper">
+            <div class="testimonial-img-bg"></div>
+            <img src="images/testimonials/photo3.jpg" alt="Customer">
+          </div>
+          <div class="testimonial-content">
+            <p class="text-muted">"This is exactly what I was looking for. Thank you for making it painless, pleasant
+              and most of all hassle free!"</p>
+            <div class="product-rating d-flex text-warning"></div>
+            <div class="divider-line"></div>
+            <h4 class="fw-bold mb-1">John W.</h4>
+            <small class="text-muted">Developer</small>
+          </div>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <div class="swiper-button-prev testim-btn-prev"></div>
+        <div class="swiper-button-next testim-btn-next"></div>
       </div>
     </div>
   </section>
-  <article>
-    <div class="container">
-      <div class="text-center">
-        <h2>This Is What Our Customers Say</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis</p>
+  <section class="container my-5">
+    <div class="row align-items-center text-center text-md-start position-relative overflow-hidden py-5">
+
+      <div class="col-md-3 d-none d-md-block text-center">
+        <img src="images/newsletter_boy.png" alt="Boy" class="img-fluid"
+          style="max-height: 500px; object-fit: contain;">
       </div>
-      <div class="row">
-        <div class="col">
-          <img src="images/customers/customer1.png" alt="">
-        </div>
-        <div class="col">
-          <img src="images/customers/customer2.png" alt="">
-        </div>
-        <div class="col">
-          <img src="images/customers/customer3.png" alt="">
-        </div>
+
+      <div class="col-12 col-md-6 text-center z-1">
+        <h2 class="display-5 mb-3">Subscribe To Our Newsletter</h2>
+        <p class="text-muted mb-5 mx-auto" style="max-width: 500px;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem.
+          Scelerisque duis ultrices sollicitudin
+        </p>
+        <form class="mx-auto" style="max-width: 400px;">
+          <div class="bg-white rounded shadow-sm mb-4 p-1">
+            <input type="email" class="form-control border-0 shadow-none py-3 text-center"
+              placeholder="michael@ymail.com" required>
+          </div>
+          <button type="submit" class="btn btn-dark px-5 py-2 mt-5">
+            Subscribe Now
+          </button>
+        </form>
+      </div>
+
+      <div class="col-md-3 d-none d-md-block text-center">
+        <img src="images/newsletter_girl.png" alt="Girl" class="img-fluid"
+          style="max-height: 500px; object-fit: contain;">
+      </div>
+
+    </div>
+  </section>
+  <footer class="border-top pt-5 pb-4 mt-5">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
+
+        <a class="navbar-brand" href="#">FASCO</a>
+
+        <ul class="list-inline mb-0 text-center text-md-end">
+          <li class="list-inline-item mx-3"><a href="#" class="text-decoration-none text-muted small">Support Center</a>
+          </li>
+          <li class="list-inline-item mx-3"><a href="#" class="text-decoration-none text-muted small">Invoicing</a></li>
+          <li class="list-inline-item mx-3"><a href="#" class="text-decoration-none text-muted small">Contract</a></li>
+          <li class="list-inline-item mx-3"><a href="#" class="text-decoration-none text-muted small">Careers</a></li>
+          <li class="list-inline-item mx-3"><a href="#" class="text-decoration-none text-muted small">Blog</a></li>
+          <li class="list-inline-item mx-3"><a href="#" class="text-decoration-none text-muted small">FAQ,s</a></li>
+        </ul>
+      </div>
+
+      <div class="text-center mt-5">
+        <small class="text-muted" style="font-size: 0.75rem;">
+          Copyright © 2022 Xpro . All Rights Reserved.
+        </small>
       </div>
     </div>
-  </article>
-  <footer>
-    <div class="container"></div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
