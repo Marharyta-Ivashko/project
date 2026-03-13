@@ -116,3 +116,37 @@ const swiperTestimonials = new Swiper('.testimonials-slider', {
     992: { spaceBetween: -180 }
   }
 });
+
+// ---- SHOP PAGE -----
+
+// 1. Знаходимо всі кнопки фільтрів розміру і всі товари
+const filterButtons = document.querySelectorAll('#size-filters .filter-size-btn');
+const productItems = document.querySelectorAll('.product-item');
+
+// 2. Додаємо подію "клік" на кожну кнопку
+filterButtons.forEach(button => {
+  button.addEventListener('click', function () {
+
+    // Знімаємо клас 'active' з усіх кнопок і додаємо на ту, яку натиснули
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    this.classList.add('active');
+
+    // Отримуємо значення фільтра, наприклад "M" або "all"
+    const selectedSize = this.getAttribute('data-filter');
+
+    // 3. Проходимося по кожному товару і перевіряємо його розмір
+    productItems.forEach(item => {
+      const itemSize = item.getAttribute('data-size');
+
+      // Якщо вибрано "all" АБО розмір товару збігається з вибраним
+      if (selectedSize === 'all' || selectedSize === itemSize) {
+        // Показуємо товар (забираємо клас d-none)
+        item.classList.remove('d-none');
+      } else {
+        // Ховаємо товар (додаємо клас d-none)
+        item.classList.add('d-none');
+      }
+    });
+
+  });
+});
