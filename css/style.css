@@ -8,6 +8,7 @@
   --bs-success: #00cc66;
   --bs-dark: #000000;
   --bs-white: #FFFFFF;
+  --bs-page-bg: #F5F5F5;
 }
 
 h2 {
@@ -18,7 +19,7 @@ h2 {
 }
 
 body {
-  background-color: #F5F5F5
+  background-color: var(--bs-page-bg)
 }
 
 .navbar-brand {
@@ -108,7 +109,7 @@ body {
 
 /* Налаштування красивих крапок */
 .swiper-pagination-bullet {
-  background-color: #000 !important;
+  background-color: var(--bs-dark) !important;
   opacity: 0.2;
   width: 8px !important;
   height: 8px !important;
@@ -230,7 +231,7 @@ body {
 
 /* Налаштування окремого слайда (картки) */
 .testimonials-slider .swiper-slide {
-  background: #ffffff;
+  background: var(--bs-white);
   width: 700px;
   /* Ширина картки на ПК */
   padding: 40px;
@@ -294,7 +295,7 @@ body {
 .swiper-button-prev {
   width: 50px;
   height: 50px;
-  background-color: #ffffff;
+  background-color: var(--bs-white);
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   color: #333;
@@ -321,7 +322,7 @@ body {
   margin: 0 !important;
   width: 50px;
   height: 50px;
-  background-color: #ffffff;
+  background-color: var(--bs-white);
   border-radius: 50%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   color: #333;
@@ -367,4 +368,37 @@ body {
   .divider-line {
     margin: 20px auto;
   }
+}
+
+/* --- MODAL --- */
+
+.divider-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: var(--bs-muted);
+  font-size: 0.9rem;
+}
+
+.divider-text::before,
+.divider-text::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.divider-text::before {
+  margin-right: 1em;
+}
+
+.divider-text::after {
+  margin-left: 1em;
+}
+
+/* Трохи округлюємо саму модалку для сучасного вигляду */
+.modal-content {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
