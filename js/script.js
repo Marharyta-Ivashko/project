@@ -1,30 +1,33 @@
 // --- 1. НАЛАШТУВАННЯ СЛАЙДЕРА SWIPER ---
-const swiper = new Swiper('.mySwiper', {
-  // Показуємо 1 повний слайд і "шматочок" наступного на мобільному
-  slidesPerView: 1.2,
-  spaceBetween: 20, // Відстань між фото (в пікселях)
+const swiperEl = document.querySelector('.mySwiper');
+if (swiperEl) {
+  const swiper = new Swiper('.mySwiper', {
+    // Показуємо 1 повний слайд і "шматочок" наступного на мобільному
+    slidesPerView: 1.2,
+    spaceBetween: 20, // Відстань між фото (в пікселях)
 
-  // Налаштування для різних екранів (Адаптивність)
-  breakpoints: {
-    768: {
-      // На планшетах і ПК показуємо 2 повних фото і половинку третього
-      slidesPerView: 2.5,
-      spaceBetween: 30,
-    }
-  },
+    // Налаштування для різних екранів (Адаптивність)
+    breakpoints: {
+      768: {
+        // На планшетах і ПК показуємо 2 повних фото і половинку третього
+        slidesPerView: 2.5,
+        spaceBetween: 30,
+      }
+    },
 
-  // Підключаємо наші власні кнопки "Вперед/Назад"
-  navigation: {
-    nextEl: '.custom-next',
-    prevEl: '.custom-prev',
-  },
+    // Підключаємо наші власні кнопки "Вперед/Назад"
+    navigation: {
+      nextEl: '.custom-next',
+      prevEl: '.custom-prev',
+    },
 
-  // Підключаємо наші крапки
-  pagination: {
-    el: '.custom-pagination',
-    clickable: true, // Щоб можна було клікати по крапках
-  },
-});
+    // Підключаємо наші крапки
+    pagination: {
+      el: '.custom-pagination',
+      clickable: true, // Щоб можна було клікати по крапках
+    },
+  });
+}
 // ... далі йде ваш код таймера ...
 
 // --- 2. НАЛАШТУВАННЯ ТАЙМЕРА ---
@@ -99,23 +102,26 @@ navLinks.forEach(link => {
   });
 });
 
-const swiperTestimonials = new Swiper('.testimonials-slider', {
-  slidesPerView: 'auto',
-  centeredSlides: true,
-  loop: false,
-  initialSlide: 1,
+const testSlider = document.querySelector('.testimonials-slider');
+if (testSlider) {
+  const swiperTestimonials = new Swiper('.testimonials-slider', {
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    loop: false,
+    initialSlide: 1,
 
-  navigation: {
-    // Вказуємо унікальні класи для стрілочок саме цього слайдера
-    nextEl: '.testim-btn-next',
-    prevEl: '.testim-btn-prev',
-  },
+    navigation: {
+      // Вказуємо унікальні класи для стрілочок саме цього слайдера
+      nextEl: '.testim-btn-next',
+      prevEl: '.testim-btn-prev',
+    },
 
-  breakpoints: {
-    320: { spaceBetween: 20 },
-    992: { spaceBetween: -180 }
-  }
-});
+    breakpoints: {
+      320: { spaceBetween: 20 },
+      992: { spaceBetween: -180 }
+    }
+  });
+}
 
 // ---- SHOP PAGE -----
 
@@ -150,3 +156,85 @@ filterButtons.forEach(button => {
 
   });
 });
+
+// ---- MINI CARD ----
+
+// Logic for quantity input (- / +)
+const qtyMinus = document.getElementById('qty-minus');
+const qtyPlus = document.getElementById('qty-plus');
+const qtyInput = document.getElementById('qty-input');
+
+if (qtyMinus && qtyPlus && qtyInput) {
+  qtyMinus.addEventListener('click', () => {
+    let currentVal = parseInt(qtyInput.value) || 1;
+    if (currentVal > 1) qtyInput.value = currentVal - 1;
+  });
+
+  qtyPlus.addEventListener('click', () => {
+    let currentVal = parseInt(qtyInput.value) || 1;
+    qtyInput.value = currentVal + 1;
+  });
+}
+
+// Mock countdown timer
+const TimerDays = document.getElementById('mc-days');
+const TimerHrs = document.getElementById('mc-hours');
+const TimerMins = document.getElementById('mc-minutes');
+const TimerSecs = document.getElementById('mc-seconds');
+
+if (TimerDays && TimerHrs && TimerMins && TimerSecs) {
+  let totalSeconds = (0 * 86400) + (5 * 3600) + (59 * 60) + 47; // Setting 00:05:59:47
+
+  setInterval(() => {
+    if (totalSeconds > 0) totalSeconds--;
+
+    let d = Math.floor(totalSeconds / 86400);
+    let h = Math.floor((totalSeconds % 86400) / 3600);
+    let m = Math.floor((totalSeconds % 3600) / 60);
+    let s = totalSeconds % 60;
+
+    TimerDays.textContent = d < 10 ? '0' + d : d;
+    TimerHrs.textContent = h < 10 ? '0' + h : h;
+    TimerMins.textContent = m < 10 ? '0' + m : m;
+    TimerSecs.textContent = s < 10 ? '0' + s : s;
+  }, 1000);
+}
+
+// Changing selected image
+const thumbnails = document.querySelectorAll('.mini-card-thumbnails img');
+const mainImg = document.querySelector('.flex-grow-1 img.object-fit-cover');
+
+if (thumbnails.length > 0 && mainImg) {
+  thumbnails.forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      // remove active from all
+      thumbnails.forEach(t => t.classList.remove('active'));
+      // add active to clicked
+      thumb.classList.add('active');
+      // change main image to clicked thumbnail source
+      mainImg.src = thumb.src;
+    });
+  });
+}
+
+// Toggle border on color swatch
+const colorSwatches = document.querySelectorAll('.color-swatch-ring');
+if (colorSwatches.length > 0) {
+  colorSwatches.forEach(sw => {
+    sw.addEventListener('click', () => {
+      colorSwatches.forEach(s => s.classList.remove('active'));
+      sw.classList.add('active');
+    });
+  });
+}
+
+// Toggle active on size button
+const sizeBtns = document.querySelectorAll('.size-btn');
+if (sizeBtns.length > 0) {
+  sizeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      sizeBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+}

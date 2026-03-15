@@ -501,3 +501,141 @@ body {
 .filter-link:hover {
   color: #000;
 }
+
+/* --- PAGINATION STYLES --- */
+
+.custom-pagination-nav .page-link {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50% !important;
+  color: var(--bs-muted);
+  border: 1px solid transparent;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  margin: 0 4px;
+}
+
+.custom-pagination-nav .page-link:focus {
+  box-shadow: none;
+}
+
+.custom-pagination-nav .page-item:not(.active) .page-link:hover {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+.custom-pagination-nav .page-item.active .page-link {
+  background-color: var(--bs-dark, #000);
+  border-color: var(--bs-dark, #000);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.custom-pagination-nav .page-item.disabled .page-link {
+  color: #adb5bd;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+/* --- MINI CARD STYLES --- */
+
+.mini-card-thumbnails img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  background-color: var(--bs-page-bg);
+}
+
+.mini-card-thumbnails img.active,
+.mini-card-thumbnails img:hover {
+  opacity: 1;
+  border: 1px solid var(--bs-dark) !important;
+}
+
+.timer-box {
+  background-color: var(--bs-page-bg);
+  border-radius: 4px;
+  color: #ff5252;
+  font-weight: 500;
+}
+
+.color-swatch-ring.active {
+  border: 1px solid var(--bs-dark);
+  padding: 3px;
+}
+
+.color-swatch-ring {
+  border: 1px solid transparent;
+  padding: 3px;
+  cursor: pointer;
+  display: inline-flex;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.color-dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: block;
+}
+
+.size-btn {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #e0e0e0;
+  background-color: transparent;
+  color: #333;
+  border-radius: 0;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.size-btn.active,
+.size-btn:hover {
+  background-color: var(--bs-dark);
+  color: #fff;
+  border-color: var(--bs-dark);
+}
+
+.quantity-control {
+  width: 120px;
+  border: 1px solid var(--bs-dark);
+  border-radius: 0;
+}
+
+.quantity-control button {
+  border: none;
+  background: transparent;
+  padding: 0 15px;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.quantity-control input {
+  border: none;
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.add-to-cart-btn {
+  border: 1px solid var(--bs-dark);
+  border-radius: 0;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--bs-dark);
+  color: #fff;
+}
