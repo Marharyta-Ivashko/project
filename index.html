@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
+  <script src="js/loader.js" defer></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,25 +21,7 @@
 
 <body data-bs-spy="scroll" data-bs-target="#navbarNav">
   <header>
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <a class="navbar-brand text-muted" href="#">FASCO</a>
-        <div class="collapse navbar-collapse align-self-center d-flex justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#deals">Deals</a></li>
-            <li class="nav-item"><a class="nav-link" href="#arrivals">New Arrivals</a></li>
-            <li class="nav-item"><a class="nav-link" href="/pages/shop_page.html">Shop</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#registerModal"
-                href="#">Sign in</a></li>
-          </ul>
-        </div>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#registerModal2">Sign
-            Up</button>
-        </div>
-      </nav>
-    </div>
+    <div data-include="components/header.html"></div>
   </header>
   <section>
     <div class="container mt-5">
@@ -432,28 +415,7 @@
     </div>
   </section>
   <footer class="border-top pt-5 pb-4 mt-5">
-    <div class="container">
-      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
-
-        <a class="navbar-brand" href="#">FASCO</a>
-
-        <ul class="list-inline mb-0 text-center text-md-end">
-          <li class="list-inline-item mx-3"><a href="#" class="text-decoration-none text-muted small">Support Center</a>
-          </li>
-          <li class="list-inline-item mx-3"><a href="#" class="text-decoration-none text-muted small">Invoicing</a></li>
-          <li class="list-inline-item mx-3"><a href="#" class="text-decoration-none text-muted small">Contract</a></li>
-          <li class="list-inline-item mx-3"><a href="#" class="text-decoration-none text-muted small">Careers</a></li>
-          <li class="list-inline-item mx-3"><a href="#" class="text-decoration-none text-muted small">Blog</a></li>
-          <li class="list-inline-item mx-3"><a href="#" class="text-decoration-none text-muted small">FAQ,s</a></li>
-        </ul>
-      </div>
-
-      <div class="text-center mt-5">
-        <small class="text-muted" style="font-size: 0.75rem;">
-          Copyright © 2022 Xpro . All Rights Reserved.
-        </small>
-      </div>
-    </div>
+    <div data-include="components/footer.html"></div>
   </footer>
   <!-- Modal -->
   <div class="modal fade" id="registerModal" aria-hidden="true" aria-labelledby="registerModalLabel" tabindex="-1">
@@ -502,7 +464,7 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-primary" data-bs-target="#registerModal2" data-bs-toggle="modal">Create
+            <button class="btn btn-dark" data-bs-target="#registerModal2" data-bs-toggle="modal">Create
               Account</button>
           </div>
         </div>
@@ -574,7 +536,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-primary" data-bs-target="#registerModal" data-bs-toggle="modal">Back to
+          <button class="btn btn-dark" data-bs-target="#registerModal" data-bs-toggle="modal">Back to
             Login</button>
         </div>
       </div>
