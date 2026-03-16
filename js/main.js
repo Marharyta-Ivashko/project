@@ -10,3 +10,4 @@ import './modules/timer.js';
 import './modules/ratings.js';
 import './modules/category-menu.js';
 import './modules/shop.js';
+import './modules/cart.js';

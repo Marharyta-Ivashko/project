@@ -25,6 +25,13 @@ h3 {
   font-weight: 400;
 }
 
+h4 {
+  font-family: var(--custom-heading-font);
+  font-size: 2rem;
+  color: var(--bs-dark);
+  font-weight: 400;
+}
+
 body {
   background-color: var(--bs-page-bg)
 }
