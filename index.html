@@ -24,7 +24,8 @@
     <div class="container mt-5">
       <div class="row g-4">
         <div class="col-12 col-md-4">
-          <div class="bg-light h-100 text-center rounded">
+          <div class="text-center rounded d-flex align-items-end justify-content-center"
+            style="background-color: #E0E0E0; height: 47.25rem;">
             <img src="images/homepage_1.png" class="img-fluid" alt="Чоловічий одяг">
           </div>
         </div>
@@ -33,19 +34,21 @@
             <img src="images/homepage_3min.png" class="img-fluid rounded mb-3" alt="girls">
           </div>
           <div class="text-center text-muted my-4">
-            <h1 class="fw-bold" style="font-size: 3rem ; line-height: 1; letter-spacing: -4%;">ULTIMATE <br>
-              <span class="display-4 fw-semibold"
-                style="font-size: 6rem; color: transparent; -webkit-text-stroke: 2px var(--bs-muted);">SALE</span>
+            <h1 class="hero-title fw-medium lh-1">ULTIMATE <br>
+              <span class="hero-sale-text fw-medium">SALE</span>
             </h1>
-            <p>NEW COLLECTION</p>
-            <a href="./pages/shop_page.html" class="btn btn-dark">SHOP NOW</a>
+            <p class="hero-collection-text text-uppercase lh-1">NEW COLLECTION</p>
+            <a href="./pages/shop_page.html"
+              class="btn btn-dark hero-shop-btn shadow-sm d-inline-flex align-items-center justify-content-center">SHOP
+              NOW</a>
           </div>
           <div class="rounded">
             <img src="images/homepage_4min.png" class="img-fluid" alt="Дівчата">
           </div>
         </div>
         <div class="col-12 col-md-4">
-          <div class="bg-light h-100 text-center rounded">
+          <div class="text-center rounded d-flex align-items-end justify-content-center"
+            style="background-color: #E0E0E0; height: 47.25rem;">
             <img src="images/homepage_2.png" class="img-fluid" alt="Чоловічий стиль">
           </div>
         </div>
@@ -182,11 +185,12 @@
       </div>
     </div>
   </section>
-  <section class="product-section container-fluid mt-5" data-include="components/peaky_blinders.html"></section>
+  <section class="product-section container-fluid mt-5" data-include="components/peaky_blinders.html">
+  </section>
   <section data-include="components/follow_instagram.html"></section>
   <section class="testimonials-section">
     <div class="container text-center mb-4">
-      <h2 class="mb-3">This Is What Our Customers Say</h2>
+      <h3 class="mb-3">This Is What Our Customers Say</h3>
       <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis</p>
     </div>
     <div class="testimonials-slider swiper">
@@ -240,40 +244,11 @@
       </div>
     </div>
   </section>
-  <section>
-    <div class="container my-5">
-      <div class="row align-items-center text-center text-md-start position-relative overflow-hidden py-4">
-        <div class="col-md-3 d-none d-md-block text-center">
-          <img src="images/newsletter_boy.png" alt="Boy" class="img-fluid"
-            style="max-height: 500px; object-fit: contain;">
-        </div>
-        <div class="col-12 col-md-6 text-center z-1">
-          <h2 class="display-5 mb-4">Subscribe To Our Newsletter</h2>
-          <p class="text-muted mb-4 mx-auto" style="max-width: 500px;">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem.
-            Scelerisque duis ultrices sollicitudin
-          </p>
-          <form class="mx-auto" style="max-width: 400px;">
-            <div class="bg-white rounded shadow-sm mb-4 p-1">
-              <input type="email" class="form-control border-0 shadow-none py-3 text-center"
-                placeholder="michael@ymail.com" required>
-            </div>
-            <button type="submit" class="btn btn-dark px-5 py-2 mt-3">
-              Subscribe Now
-            </button>
-          </form>
-        </div>
-        <div class="col-md-3 d-none d-md-block text-center">
-          <img src="images/newsletter_girl.png" alt="Girl" class="img-fluid"
-            style="max-height: 500px; object-fit: contain;">
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <section class="container my-5" data-include="components/subscription.html"></section>
+  <footer data-include="components/footer.html"></footer>
   <!-- Modal -->
   <div data-include="components/sign_in_modal.html"></div>
-  <div data-include="components/sing_up_modal.html"></div>
+  <div data-include="components/sign_up_modal.html"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
