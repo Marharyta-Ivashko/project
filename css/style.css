@@ -26,10 +26,16 @@ h3 {
 }
 
 h4 {
-  font-family: var(--custom-heading-font);
+  font-family: var(--custom-shop-font);
   font-size: 2rem;
   color: var(--bs-dark);
   font-weight: 400;
+}
+
+p,
+span {
+  font-family: var(--bs-body-font-family);
+  font-size: 1rem;
 }
 
 body {
@@ -202,10 +208,8 @@ body {
 
   .product-text-col {
     padding-left: 4rem;
-    /* Відступ від косої лінії */
   }
 
-  /* Створення косої чорної лінії та накладання на фото */
   .product-text-col::before {
     content: '';
     position: absolute;
@@ -229,7 +233,6 @@ body {
 /* Загальний фон секції */
 .testimonials-section {
   background-color: #f8f9fa;
-  /* Світло-сірий фон, як на скріншоті */
   padding: 80px 0;
   overflow: hidden;
 }
@@ -390,9 +393,9 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  margin: 1.5rem 0;
   color: var(--bs-muted);
   font-size: 0.9rem;
+  font-family: var(--bs-body-font-family);
 }
 
 .divider-text::before,
@@ -410,18 +413,27 @@ body {
   margin-left: 1em;
 }
 
-/* Трохи округлюємо саму модалку для сучасного вигляду */
 .modal-content {
   border-radius: 12px;
   border: none;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+.form-control {
+  border: 0;
+  border-bottom: 1px solid #dee2e6;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  border-color: #000;
+  box-shadow: none;
+}
+
+
 /* --- SHOP PAGE STYLES --- */
 
-/* Кастомні стилі для елементів, яких немає в базовому Bootstrap */
-
-/* Квадратні кнопки розмірів */
 .filter-size-btn {
   width: 40px;
   height: 40px;
@@ -442,7 +454,6 @@ body {
   color: #000;
 }
 
-/* Кольорові кружечки для фільтрів і карток */
 .color-swatch {
   width: 24px;
   height: 24px;
@@ -453,14 +464,12 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Якщо кружечок вибрано (з рамочкою) */
 .color-swatch.selected {
   border: 2px solid var(--bs-dark);
   padding: 2px;
   background-clip: content-box;
 }
 
-/* Картка товару: прибираємо рамку, налаштовуємо фото */
 .product-card {
   border: none;
 }
@@ -468,9 +477,7 @@ body {
 .product-img-wrapper {
   position: relative;
   background-color: var(--bs-page-bg);
-  /* Світло-сірий фон для фотографій */
   padding-top: 130%;
-  /* Пропорції фотографії (висока) */
   overflow: hidden;
 }
 
@@ -483,7 +490,6 @@ body {
   object-fit: cover;
 }
 
-/* Лейбл "Sold out" */
 .badge-sold-out {
   position: absolute;
   top: 50%;
@@ -503,7 +509,6 @@ body {
   text-align: center;
 }
 
-/* Стилізація посилань фільтра (Brands, Collections) */
 .filter-link {
   color: #6c757d;
   text-decoration: none;
@@ -515,8 +520,6 @@ body {
 .filter-link:hover {
   color: var(--bs-dark);
 }
-
-/* --- PAGINATION STYLES --- */
 
 .custom-pagination-nav .page-link {
   width: 36px;
@@ -677,9 +680,9 @@ body {
   border-radius: 0.625rem;
 }
 
-.signup-btn {
-  width: 9.5rem;
-  height: 3.5rem;
+.sign-btn {
+  width: 9rem;
+  height: 2.8rem;
   border-radius: 0.625rem;
   display: inline-flex;
   align-items: center;
