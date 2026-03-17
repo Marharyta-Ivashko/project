@@ -12,7 +12,7 @@ if (testSlider) {
     },
     breakpoints: {
       320: { spaceBetween: 20 },
-      992: { spaceBetween: -180 }
+      992: { spaceBetween: -80 }
     }
   });
 }

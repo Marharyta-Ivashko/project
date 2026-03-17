@@ -45,7 +45,7 @@ body {
 .navbar-brand {
   font-family: var(--custom-heading-font);
   font-size: 3rem;
-  color: var(--bs-muted);
+  color: var(--bs-muted) !important;
 }
 
 .nav-item a {
@@ -78,31 +78,25 @@ body {
 
 /* --- СТИЛІ ДЛЯ КАСТУМНОЇ КАРУСЕЛІ SWIPER --- */
 
-/* 1. Головний контейнер */
 .mySwiper {
   height: 550px;
-  /* Ви можете змінити цю цифру, щоб зробити слайдер вищим/нижчим */
   position: relative;
   overflow: hidden;
 }
 
-/* 2. Примушуємо всі слайди притискатися до верху */
 .mySwiper .swiper-wrapper {
   align-items: flex-start !important;
 }
 
-/* 3. Налаштування слайдів (за замовчуванням всі КОРОТШІ) */
 .mySwiper .swiper-slide {
   height: 75% !important;
   transition: height 0.4s ease-in-out;
 }
 
-/* 4. АКТИВНИЙ слайд стає на всю висоту */
 .mySwiper .swiper-slide-active {
   height: 100% !important;
 }
 
-/* 5. Біла плашка з текстом */
 .sale-badge {
   opacity: 0;
   visibility: hidden;
@@ -116,19 +110,15 @@ body {
   transform: translateY(0);
 }
 
-/* 6. Блок управління (Кнопки та Крапки) */
 .controls-wrapper {
   position: absolute;
   bottom: 0;
   right: 0;
   width: 50%;
-  /* Ширина блоку, щоб він якраз помістився під другим слайдом */
   z-index: 10;
   padding-bottom: 20px;
-  /* Відступ від самісінького низу */
 }
 
-/* Налаштування красивих крапок */
 .swiper-pagination-bullet {
   background-color: var(--bs-dark) !important;
   opacity: 0.2;
@@ -166,18 +156,14 @@ body {
 .product-section {
   width: 100%;
   overflow: hidden;
-  /* Ховаємо елементи, що виходять за межі при нахилі */
   background-color: #F8F8F8;
-  /* Колір фону текстового блоку */
 }
 
 .product-image-col {
   background: url('../images/image.png');
   background-repeat: no-repeat;
-  background-size: contain;
-  /* Фото маштабується, щоб влізти повністю і не обрізатися */
-  background-position: right center;
-  /* 80% посуне фото правіше ближче до лінії */
+  background-size: cover;
+  background-position: center;
   min-height: 350px;
 }
 
@@ -210,56 +196,42 @@ body {
     top: 0;
     bottom: 0;
     left: -45px;
-    /* Зсуваємо блок вліво, щоб він перекривав фото */
     width: 150%;
-    /* Ширина з запасом, щоб закрити правий край */
     background-color: #DADADA;
-    /* Той самий колір, що й фон текстового блоку */
     border-left: 3px solid #000000;
-    /* Сама чорна коса лінія */
     transform: skewX(-12deg);
-    /* Нахил лінії */
     transform-origin: bottom;
     z-index: 1;
   }
 }
 
-/* Загальний фон секції */
 .testimonials-section {
   background-color: #f8f9fa;
   padding: 80px 0;
   overflow: hidden;
 }
 
-/* Налаштування контейнера слайдера */
 .testimonials-slider {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 30px;
-  /* Зменшили, бо кнопки тепер нижче */
+  padding-top: 20px;
+  padding-bottom: 20px;
   overflow: hidden;
 }
 
-/* Налаштування окремого слайда (картки) */
 .testimonials-slider .swiper-slide {
   background: var(--bs-white);
   width: 700px;
-  /* Ширина картки на ПК */
   padding: 40px;
   display: flex;
   align-items: center;
   gap: 40px;
   transition: all 0.4s ease;
-  /* Плавна анімація зміни розміру */
-
-  /* Неактивні слайди (зменшені та прозорі) */
   transform: scale(0.8);
   opacity: 0.5;
   z-index: 1;
   box-shadow: none;
 }
 
-/* Активний слайд (по центру) */
 .testimonials-slider .swiper-slide-active {
   transform: scale(1);
   opacity: 1;
@@ -267,14 +239,12 @@ body {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
 }
 
-/* Стиль для фотографії з сірим квадратом позаду */
 .testimonial-img-wrapper {
   position: relative;
   min-width: 180px;
   height: 180px;
 }
 
-/* Сірий квадрат (зміщений вліво і вниз) */
 .testimonial-img-bg {
   position: absolute;
   top: 15px;
@@ -285,7 +255,6 @@ body {
   z-index: 1;
 }
 
-/* Саме фото */
 .testimonial-img-wrapper img {
   position: relative;
   width: 100%;
@@ -294,14 +263,12 @@ body {
   z-index: 2;
 }
 
-/* Золоті зірочки */
 .stars {
   color: #ffb400;
   font-size: 1.2rem;
   margin-bottom: 15px;
 }
 
-/* Кнопки навігації (стрілочки) */
 .swiper-button-next,
 .swiper-button-prev {
   width: 50px;
@@ -312,24 +279,18 @@ body {
   color: #333;
   top: auto;
   bottom: 0;
-  /* Опускаємо вниз */
 }
 
 .slider-controls {
   display: flex;
   justify-content: center;
-  /* Центруємо */
   gap: 20px;
-  /* Відстань між кнопками */
   margin-top: 10px;
-  /* Відступ від карток до кнопок */
 }
 
-/* Перебиваємо стандартні налаштування Swiper для кнопок */
 .testim-btn-prev,
 .testim-btn-next {
   position: static !important;
-  /* Відміняємо абсолютне позиціювання поверх фото */
   margin: 0 !important;
   width: 50px;
   height: 50px;
@@ -342,10 +303,8 @@ body {
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 16px;
-  /* Розмір стрілочок */
 }
 
-/* Розташування кнопок по центру знизу */
 .swiper-button-prev {
   left: calc(50% - 60px);
 }
@@ -354,7 +313,6 @@ body {
   right: calc(50% - 60px);
 }
 
-/* Лінія під зірками */
 .divider-line {
   width: 100px;
   height: 1px;
@@ -362,7 +320,6 @@ body {
   margin: 20px 0;
 }
 
-/* Адаптивність для телефонів */
 @media (max-width: 768px) {
   .testimonials-slider .swiper-slide {
     width: 90%;
@@ -373,7 +330,6 @@ body {
 
   .testimonial-img-bg {
     left: 15px;
-    /* На мобільному зміщуємо інакше, щоб не вилазило */
   }
 
   .divider-line {
