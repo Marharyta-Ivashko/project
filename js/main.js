@@ -2,6 +2,13 @@
 // main.js — точка входу
 // Підключає всі модулі проєкту
 // ============================
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+window.addEventListener('load', function () {
+  window.scrollTo(0, 0);
+});
 
 import './modules/component-loader.js';
 import './modules/deals-swiper.js';
