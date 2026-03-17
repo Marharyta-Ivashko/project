@@ -33,7 +33,6 @@
         </nav>
       </div>
 
-      <!-- Cart Table -->
       <div class="table-responsive">
         <table class="table align-middle" id="cart-table">
           <thead>
@@ -46,7 +45,7 @@
           </thead>
           <tbody id="cart-items">
             <!-- Cart Row -->
-            <tr class="border-bottom">
+            <tr class="border-bottom" data-price="39.00">
               <td class="py-4">
                 <div class="d-flex align-items-start gap-3">
                   <div style="width: 120px; height: 140px; flex-shrink: 0;">
@@ -94,7 +93,10 @@
           <!-- Subtotal -->
           <div class="d-flex justify-content-between align-items-center py-4 border-bottom">
             <span class="fw-semibold fs-5">Subtotal</span>
-            <span class="fw-semibold fs-5" id="cart-subtotal">$100.00</span>
+            <span class="fw-semibold fs-5">
+              <span>$</span>
+              <span id="cart-subtotal">39.00</span>
+            </span>
           </div>
 
           <!-- Checkout Button -->

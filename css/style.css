@@ -179,7 +179,6 @@ body {
   background-position: right center;
   /* 80% посуне фото правіше ближче до лінії */
   min-height: 350px;
-  /* Висота для мобільних пристроїв */
 }
 
 .product-text-col {
@@ -197,11 +196,6 @@ body {
 }
 
 @media (min-width: 992px) {
-  .product-section {
-    height: 570px;
-    /* Фіксована висота на ПК, як ви замовляли */
-  }
-
   .product-image-col {
     min-height: 100%;
   }

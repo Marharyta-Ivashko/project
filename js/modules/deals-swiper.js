@@ -3,12 +3,12 @@ function initDealsSwiper() {
   const swiperEl = document.querySelector('.mySwiper');
   if (swiperEl) {
     new Swiper('.mySwiper', {
-      slidesPerView: 1.2,
+      slidesPerView: 1,
       spaceBetween: 20,
       loop: true,
       breakpoints: {
         768: {
-          slidesPerView: 2.5,
+          slidesPerView: 2,
           spaceBetween: 30,
         }
       },

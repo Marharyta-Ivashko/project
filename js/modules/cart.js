@@ -1,28 +1,48 @@
-// Cart quantity controls
-document.querySelectorAll('.cart-qty-minus').forEach(btn => {
-  btn.addEventListener('click', function () {
-    const row = this.closest('tr');
-    const display = row.querySelector('.cart-qty-display');
-    const total = row.querySelector('.cart-row-total');
-    const price = parseFloat(row.querySelector('td:nth-child(2) span').textContent.replace('$', ''));
-    let qty = parseInt(display.textContent) || 1;
-    if (qty > 1) {
-      qty--;
-      display.textContent = qty.toString().padStart(2, '0');
-      total.textContent = '$' + (price * qty).toFixed(2);
-    }
-  });
-});
+// Знаходимо батьківський контейнер
+const cartContainer = document.querySelector('.cart-table-body') || document.body;
 
-document.querySelectorAll('.cart-qty-plus').forEach(btn => {
-  btn.addEventListener('click', function () {
-    const row = this.closest('tr');
-    const display = row.querySelector('.cart-qty-display');
-    const total = row.querySelector('.cart-row-total');
-    const price = parseFloat(row.querySelector('td:nth-child(2) span').textContent.replace('$', ''));
-    let qty = parseInt(display.textContent) || 1;
+// Функція для перерахунку загальної суми (Subtotal)
+function updateSubtotal() {
+  const subtotalElement = document.getElementById('cart-subtotal');
+  const singleRow = document.querySelector('#cart-items tr'); // Беремо перший (і єдиний) товар
+
+  if (!subtotalElement || !singleRow) return;
+
+  const price = parseFloat(singleRow.getAttribute('data-price')) || 0;
+  const qtyDisplay = singleRow.querySelector('.cart-qty-display');
+  const qty = parseInt(qtyDisplay.textContent, 10) || 1;
+
+  // Рахуємо суму для товару
+  subtotalElement.textContent = (price * qty).toFixed(2);
+}
+
+// Додаємо обробник подій для кнопок "плюс" та "мінус"
+cartContainer.addEventListener('click', function (e) {
+  // Перевіряємо, чи клік був по кнопці "плюс" або "мінус"
+  const isMinus = e.target.closest('.cart-qty-minus');
+  const isPlus = e.target.closest('.cart-qty-plus');
+  if (!isMinus && !isPlus) return;
+  const row = e.target.closest('tr');
+  if (!row) return;
+  const display = row.querySelector('.cart-qty-display');
+  const total = row.querySelector('.cart-row-total');
+
+  // Отримуємо ціну з data-price
+  const price = parseFloat(row.getAttribute('data-price')) || 0;
+
+  let qty = parseInt(display.textContent, 10) || 1;
+  // Логіка зміни кількості
+  if (isPlus) {
     qty++;
-    display.textContent = qty.toString().padStart(2, '0');
-    total.textContent = '$' + (price * qty).toFixed(2);
-  });
+  } else if (isMinus && qty > 1) {
+    qty--;
+  } else {
+    return;
+  }
+  // Оновлюємо DOM
+  display.textContent = qty.toString().padStart(2, '0');
+  total.textContent = '$' + (price * qty).toFixed(2);
+
+  // Оновлюємо загальний Subtotal
+  updateSubtotal();
 });
