@@ -4,7 +4,7 @@
  */
 function initComponentLoader() {
     const includeElements = document.querySelectorAll('[data-include]');
-    
+
     includeElements.forEach(el => {
         const file = el.getAttribute('data-include');
         if (!file) return;
@@ -19,7 +19,7 @@ function initComponentLoader() {
             .then(html => {
                 el.innerHTML = html;
                 // Повідомляємо інші скрипти, що компонент завантажено
-                el.dispatchEvent(new CustomEvent('component:loaded', { 
+                el.dispatchEvent(new CustomEvent('component:loaded', {
                     bubbles: true,
                     detail: { file: file }
                 }));

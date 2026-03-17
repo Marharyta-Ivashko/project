@@ -1,5 +1,4 @@
 // Таймер зворотнього відліку для секції "Deals"
-// Запускається після завантаження компонента, бо #days, #hours тощо — у deals.html
 function initDealsTimer() {
   const daysEl = document.getElementById('days');
   if (!daysEl) return;
